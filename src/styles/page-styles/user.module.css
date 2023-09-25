@@ -1,0 +1,100 @@
+.user {
+  min-height: calc(100vh - 7.4rem);
+  padding: 4rem 1rem;
+  animation: 0.2s page-appear forwards;
+  background-color: rgb(251, 88, 88);
+}
+
+@keyframes page-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.userHeader {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.userDescription {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.userSecondHeader {
+  margin-bottom: 1rem;
+}
+
+.userRecipes {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.userChoice {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.userChoiceLink {
+  cursor: pointer;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: solid 4px rgb(230, 230, 230);
+  border-radius: 5px;
+  transition-duration: 0.2s;
+  outline: none;
+  background-color: white;
+}
+
+.userChoiceLink:hover {
+  border: solid 4px rgb(208, 208, 208);
+}
+
+.userChoiceLink:focus {
+  border: solid 4px rgb(107, 107, 107);
+}
+
+@media only screen and (max-width: 595px) {
+  .userRecipes {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .userRecipes {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .userRecipes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .userRecipes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .userRecipes {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+}

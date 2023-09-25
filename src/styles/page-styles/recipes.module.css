@@ -1,0 +1,76 @@
+.recipes {
+  min-height: calc(100vh - 7.4rem);
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  animation: 0.2s page-appear forwards;
+  background-color: rgb(251, 88, 88);
+}
+
+@keyframes page-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.recipesHeader {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.recipesSearchBarForm {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem;
+}
+
+.recipesList {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+@media only screen and (max-width: 595px) {
+  .recipesList {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .recipesList {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .recipesList {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .recipesList {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .recipesList {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  .recipes {
+  }
+}

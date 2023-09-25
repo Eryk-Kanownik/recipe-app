@@ -1,0 +1,149 @@
+.index {
+  animation: 0.2s page-appear forwards;
+}
+
+@keyframes page-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.title {
+  color: rgb(251, 88, 88);
+}
+
+.heroSection {
+  padding: 1rem;
+  height: 100vh;
+  background-color: rgb(235, 235, 235);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroHeader {
+  font-size: 5rem;
+  text-align: center;
+}
+
+.heroParagraph {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.recent {
+  padding: 2rem 2rem 4rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: rgb(251, 88, 88);
+}
+
+.recentHeader {
+  font-size: 3rem;
+}
+
+.recentRecipes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1rem;
+}
+
+.ad {
+  padding: 4rem 2rem;
+  background-color: rgb(227, 227, 227);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.adHeader {
+  font-size: 3rem;
+}
+
+.adButton {
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  border: solid 5px black;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: rgb(251, 88, 88);
+  transition-duration: 0.2s;
+}
+
+.adButton:hover {
+  background-color: black;
+  border: solid 5px rgb(251, 88, 88);
+  color: rgb(251, 88, 88);
+}
+
+@media only screen and (max-width: 595px) {
+  .heroHeader {
+    font-size: 4rem;
+  }
+
+  .heroParagraph {
+    font-size: 2rem;
+  }
+  .recentRecipes {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+  .recent {
+    padding: 2rem 1rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .heroHeader {
+    font-size: 4rem;
+  }
+
+  .heroParagraph {
+    font-size: 2rem;
+  }
+  .recentRecipes {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+  .recent {
+    padding: 2rem 1rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .recentRecipes {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .recent {
+    padding: 2rem;
+  }
+}
+
+@media only screen and (min-width: 889px) {
+  .recentRecipes {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .recent {
+    padding: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .recentRecipes {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .recent {
+    padding: 2rem;
+  }
+}

@@ -1,0 +1,62 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           Int      @id @default(autoincrement())
+  username     String   @unique
+  email        String   @unique
+  password     String
+  userRecipes  Recipe[] @relation("CreatedRecipes")
+  savedRecipes Recipe[] @relation("SavedRecipes")
+  saved        Saved[]
+  likes        Like[]
+}
+
+model Recipe {
+  id                  Int          @id @default(autoincrement())
+  creator             User         @relation("CreatedRecipes", fields: [creatorsId], references: [id])
+  creatorsId          Int
+  createdAt           DateTime     @default(now())
+  recipeName          String
+  ingredients         Ingredient[]
+  description         String
+  methodOfPreparation String
+  saved               User?        @relation("SavedRecipes", fields: [savedId], references: [id])
+  savedId             Int?
+  likes               Like[]
+  Saved               Saved[]
+}
+
+model Ingredient {
+  id             Int    @id @default(autoincrement())
+  recipe         Recipe @relation(fields: [recipeId], references: [id])
+  recipeId       Int
+  ingredientName String
+  count          Int
+  unit           String
+}
+
+model Saved {
+  id       Int     @id @default(autoincrement())
+  recipe   Recipe? @relation(fields: [recipeId], references: [id])
+  recipeId Int?
+  user     User?   @relation(fields: [userId], references: [id])
+  userId   Int?
+}
+
+model Like {
+  id       Int     @id @default(autoincrement())
+  recipe   Recipe? @relation(fields: [recipeId], references: [id])
+  recipeId Int?
+  user     User?   @relation(fields: [userId], references: [id])
+  userId   Int?
+}

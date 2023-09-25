@@ -1,0 +1,14 @@
+.users {
+  min-height: calc(100vh - 7.4rem);
+  padding: 4rem 1rem;
+  animation: 0.2s page-appear forwards;
+}
+
+@keyframes page-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

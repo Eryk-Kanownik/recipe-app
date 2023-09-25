@@ -1,0 +1,18 @@
+.like {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  transition-duration: 0.2s;
+}
+
+.likeIcon {
+  cursor: pointer;
+}
+
+.likeIcon:hover {
+  color: gray;
+}
+
+.likeNumber {
+  font-size: 1.5rem;
+}

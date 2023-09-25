@@ -1,0 +1,14 @@
+.ingredient {
+  margin: 0.5rem 0;
+}
+
+.ingredientDelete {
+  height: 30px;
+  width: 30px;
+  padding: 0;
+}
+
+.ingredientDelete:hover {
+  background-color: rgb(252, 115, 115);
+  border: solid 4px red;
+}

@@ -1,0 +1,34 @@
+/*
+background-color: rgb(255, 66, 66);
+*/
+
+.recipeCard {
+  min-height: 300px;
+  padding: 1.7rem;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  gap: 1rem;
+  position: relative;
+  transition-duration: 0.2s;
+  box-shadow: -1px 1px 3px rgb(0, 0, 0);
+  background-color: white;
+}
+
+.recipeCard:hover {
+  transform: translate(5px, -5px);
+  box-shadow: -5px 5px 10px rgb(56, 56, 56);
+}
+
+.recipeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.recipeAuthor {
+  color: rgb(67, 67, 67);
+}
+
+.recipeDescription {
+}

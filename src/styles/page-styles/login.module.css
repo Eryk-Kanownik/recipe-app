@@ -1,0 +1,99 @@
+.login {
+  height: calc(100vh - 7.4rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: 0.2s page-appear forwards;
+  background-color: rgb(251, 88, 88);
+}
+
+.info {
+  position: absolute;
+  top: -3rem;
+  left: 1rem;
+  right: 1rem;
+  border-radius: 5px;
+}
+
+.showInfo {
+  animation: info-appear 5s forwards;
+  background-color: rgb(222, 222, 222);
+  padding: 1rem;
+}
+
+@keyframes info-appear {
+  0% {
+    top: -3rem;
+  }
+
+  10% {
+    top: 3rem;
+  }
+  90% {
+    top: 3rem;
+  }
+  100% {
+    top: -3rem;
+  }
+}
+
+@keyframes page-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.loginForm {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.inputBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.btnSubmit {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 595px) {
+  .loginForm {
+    gap: 2rem;
+    width: 80vw;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .loginForm {
+    width: 70vw;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .loginForm {
+    width: 60vw;
+  }
+}
+
+@media only screen and (min-width: 889px) {
+  .loginForm {
+    width: 50vw;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .loginForm {
+    width: 40vw;
+  }
+}

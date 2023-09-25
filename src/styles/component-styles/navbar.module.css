@@ -1,0 +1,157 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  z-index: 2;
+  overflow: hidden;
+  max-height: 3rem;
+  transition-duration: 0.2s;
+}
+
+.navbar::after {
+  position: absolute;
+  background: linear-gradient(
+    to bottom,
+    rgba(54, 54, 54, 0.316),
+    rgba(255, 255, 255, 0)
+  );
+  transition-duration: 0.2s;
+  opacity: 0.2;
+  content: "";
+  width: 100%;
+  height: 50px;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.navbar:hover::after {
+  opacity: 1;
+}
+
+.navbarLogo {
+  font-weight: bold;
+}
+
+.navbarItems {
+  display: flex;
+  gap: 1rem;
+  transition-duration: 0.2s;
+  transform-origin: top;
+}
+
+.navbarItem {
+  transition-duration: 0.1s;
+}
+
+.navbarItem:hover {
+  text-shadow: 0 0 1px;
+}
+
+.navbarToggler {
+  position: fixed;
+  right: 0.5rem;
+  top: 0.5rem;
+  width: 35px;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  padding: 0.5rem;
+  border-radius: 50px;
+}
+
+.navbarToggler:hover {
+  background-color: rgb(232, 232, 232);
+}
+
+@media only screen and (max-width: 595px) {
+  .navbarToggler {
+    display: flex;
+  }
+  .navbar {
+    flex-direction: column;
+  }
+  .navbarItems {
+    flex-direction: column;
+    transform: scaleY(0);
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .navbarToggler {
+    display: flex;
+  }
+  .navbar {
+    flex-direction: column;
+  }
+  .navbarItems {
+    flex-direction: column;
+    transform: scaleY(0);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .navbarToggler {
+    display: flex;
+  }
+  .navbar {
+    flex-direction: column;
+  }
+  .navbarItems {
+    flex-direction: column;
+    transform: scaleY(0);
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .navbarToggler {
+    display: none;
+  }
+  .navbar {
+    flex-direction: row;
+  }
+  .navbarItems {
+    flex-direction: row;
+    transform: scaleY(1);
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .navbarToggler {
+    display: none;
+  }
+  .navbar {
+    flex-direction: row;
+  }
+  .navbarItems {
+    flex-direction: row;
+    transform: scaleY(1);
+  }
+}
+
+.isVisibleNavbar {
+  background-color: white;
+  box-shadow: 0 3px 5px rgb(154, 154, 154);
+  max-height: 20rem;
+}
+
+.isVisible {
+  transform: scaleY(1);
+}
+
+.isVisibleHamburger {
+  transform: rotate(-90deg) !important;
+}
+
+.currentPageActive {
+  font-weight: bold;
+}
